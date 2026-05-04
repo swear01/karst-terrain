@@ -1,8 +1,10 @@
 ### Gradle ###
-.gradle
+.gradle/
 build/
+*.jar
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/**/build/
+*.class
 
 ### IntelliJ IDEA ###
 .idea/
@@ -35,6 +37,17 @@ bin/
 ### Minecraft Modding ###
 run/
 !**/src/**/run/
-**/src/generated/**/.cache/
+logs/
+crash-reports/
+saves/
+screenshots/
 repo/
 !**/src/**/repo/
+src/generated/resources/.cache/
+**/src/generated/**/.cache/
+
+### Local automation outputs ###
+.minecraft-mod-spec.json
+.minecraft-scaffold.json
+.minecraft-test-report.json
+.minecraft-vanilla-check.json

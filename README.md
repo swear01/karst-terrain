@@ -1,6 +1,6 @@
 # Karst Terrain
 
-NeoForge 1.21.1 mod that adds a Karst Highlands biome to the Overworld.
+Karst Terrain is a NeoForge 1.21.1 mod that adds a new Overworld biome: Karst Highlands.
 
 ## Content
 
@@ -9,6 +9,30 @@ NeoForge 1.21.1 mod that adds a Karst Highlands biome to the Overworld.
 - Creative tab: `Karst Terrain`
 - `karst_terrain:karst_highlands` Overworld biome
 - TerraBlender integration for Overworld biome placement
+
+## Requirements
+
+Runtime:
+
+- Minecraft `1.21.1`
+- NeoForge `21.1.228` or newer compatible 1.21.1 build
+- TerraBlender for NeoForge `1.21.1-4.1.0.8` or newer compatible build
+
+Development:
+
+- Java 21
+- The included Gradle wrapper (`./gradlew`)
+
+TerraBlender is required because the mod registers a custom biome into Overworld generation. It is not bundled inside the Karst Terrain jar.
+
+## Installation
+
+1. Install Minecraft `1.21.1` with NeoForge.
+2. Download TerraBlender for NeoForge `1.21.1`.
+3. Put both jars in the instance `mods` folder:
+   - `karst_terrain-0.1.0.jar`
+   - the matching TerraBlender NeoForge jar
+4. Create a new world or explore new chunks in an existing world.
 
 ## World Generation
 
@@ -28,7 +52,7 @@ Locate it with:
 ## Build
 
 ```bash
-./gradlew build
+./gradlew clean build
 ```
 
 The built jar is written to:
@@ -37,10 +61,22 @@ The built jar is written to:
 build/libs/karst_terrain-0.1.0.jar
 ```
 
-## Test Runs
+Build outputs are intentionally ignored by git. Use the GitHub Release jar for normal installation, or build locally with the command above.
+
+## Test Commands
 
 ```bash
 ./gradlew runClient
 ./gradlew runServer
 ./gradlew runData
 ```
+
+Manual worldgen check:
+
+```mcfunction
+/locate biome karst_terrain:karst_highlands
+```
+
+## License
+
+This project was generated from the NeoForge MDK template. See `TEMPLATE_LICENSE.txt` for the template license notice.
