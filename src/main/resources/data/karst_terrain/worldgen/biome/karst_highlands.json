@@ -22,13 +22,19 @@
   "features": [
     [],
     [],
-    [],
+    [
+      "karst_terrain:karst_peak_cluster"
+    ],
     [],
     [],
     [],
     [
       "karst_terrain:limestone_strata",
       "karst_terrain:weathered_limestone_pockets"
+    ],
+    [
+      "karst_terrain:underground_river",
+      "karst_terrain:karst_cavern"
     ]
   ],
   "has_precipitation": true,

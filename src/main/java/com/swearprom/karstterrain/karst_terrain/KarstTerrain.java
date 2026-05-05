@@ -3,6 +3,7 @@ package com.swearprom.karstterrain.karst_terrain;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.swearprom.karstterrain.karst_terrain.worldgen.KarstFeatures;
 import com.swearprom.karstterrain.karst_terrain.worldgen.KarstOverworldRegion;
 import com.swearprom.karstterrain.karst_terrain.worldgen.KarstSurfaceRuleData;
 
@@ -73,6 +74,7 @@ public class KarstTerrain {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        KarstFeatures.FEATURES.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
